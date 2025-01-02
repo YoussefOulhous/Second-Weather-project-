@@ -7,7 +7,9 @@ function WeatherCart({
   error,
   setError,
   weatherData,
-  cartRef
+  cartRef,
+  AddCart,
+  cart
 }) {
   const handleCityName = (e) => {
     setCity(e.target.value);
@@ -34,24 +36,24 @@ function WeatherCart({
 
 
   return (
-    <div className="bg-[#FFD23F]  flex justify-center items-center bottom-4" ref={cartRef}>
+    <div className="bg-[#FFD23F]  flex justify-center items-center sm:items-center bottom-4" ref={cartRef}>
       <div className="">
         <div className="flex- items-center">
           <input
             type="text"
             placeholder="Search"
-            className="font-poppins w-[400px] rounded-full  border-2 py-4 px-6 text-2xl uppercase   "
+            className="font-poppins w-[400px] rounded-full  border-2 py-4 px-6 text-2xl  sm:w-[350px]  sm:py-2  "
             onChange={handleCityName}
             onKeyDown={entreClick}
           />
           <button
             onClick={handleSearchButtonClick}
-            className="w-16 h-16 bg-white rounded-full  relative  border-2 border-black py-5 ml-5  "
+            className="w-16 h-16 bg-white rounded-full  relative  border-2 border-black py-5 ml-5 sm:w-12 sm:h-12 md:w-14 md:h-14 "
           >
             <img
               src="/icons/search.png"
               alt=""
-              className="w-6 absolute right-5 bottom-5 z-0 "
+              className="w-6 sm:top-3 sm:left-2 absolute right-5 bottom-5 z-0 "
             />
           </button>
         </div>
@@ -102,6 +104,9 @@ function WeatherCart({
             
           }
           <br />
+          <button onClick={()=>{
+            AddCart(weatherData)
+          }} className="bg-green-500 py-5 px-9 mt-16 rounded-xl font-semibold font-poppins text-3xl relative left-1/2 transform -translate-x-1/2 -translate-y-1/2 ">Add</button>
           <br />
         </div>
       </div>

@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 
-function Header({ darkMode, toggleDark ,scrollToSection ,homeRef ,cartRef}) {
+function Header({ darkMode, toggleDark ,scrollToSection ,homeRef ,cartRef,addRef}) {
   const [selected, setselected] = useState(1);
 
   const handleSelected = (buttonId) => {
@@ -12,7 +12,7 @@ function Header({ darkMode, toggleDark ,scrollToSection ,homeRef ,cartRef}) {
 
   return (
     <div className={`${darkMode && "dark"}`}>
-      <div className="flex justify-around py-5 px-5 items-center w-full border-b-2 border-gray-200 dark:border-white fixed backdrop-blur shrink-0">
+      <div className="flex justify-around py-5 px-5 items-center w-full border-b-2 border-gray-200 dark:border-white fixed backdrop-blur shrink-0 z-10"  >
         {/* logo */}
         <div className=" border-2 border-gray-200 dark:border-white rounded-xl">
           <img
@@ -56,7 +56,9 @@ function Header({ darkMode, toggleDark ,scrollToSection ,homeRef ,cartRef}) {
                 ? " bg-neutral-900 text-white dark:bg-white dark:text-neutral-900 "
                 : "bg-white text-neutral-900 border-2 border-neutral-900 dark:bg-neutral-900 dark:text-white"
             } `}
-            onClick={() => handleSelected(3)}
+            onClick={() => {handleSelected(3);
+              scrollToSection(addRef)
+            }}
           >
             <h2>Add</h2>
           </button>
