@@ -1,18 +1,23 @@
 import React from "react";
 import { useState } from "react";
 
-function Header({ darkMode, toggleDark ,scrollToSection ,homeRef ,cartRef,addRef}) {
+function Header({
+  darkMode,
+  toggleDark,
+  scrollToSection,
+  homeRef,
+  cartRef,
+  addRef,
+}) {
   const [selected, setselected] = useState(1);
 
   const handleSelected = (buttonId) => {
     setselected(buttonId);
   };
 
-  
-
   return (
     <div className={`${darkMode && "dark"}`}>
-      <div className="flex justify-around py-5 px-5 items-center w-full border-b-2 border-gray-200 dark:border-white fixed backdrop-blur shrink-0 z-10"  >
+      <div className="flex justify-around py-5 px-5 items-center w-full border-b-2 border-gray-200 dark:border-white fixed backdrop-blur shrink-0 z-10">
         {/* logo */}
         <div className=" border-2 border-gray-200 dark:border-white rounded-xl">
           <img
@@ -29,9 +34,10 @@ function Header({ darkMode, toggleDark ,scrollToSection ,homeRef ,cartRef,addRef
                 ? " bg-neutral-900 text-white dark:bg-white dark:text-neutral-900 "
                 : "bg-white text-neutral-900 border-2 border-neutral-900 dark:bg-neutral-900 dark:text-white "
             } `}
-            onClick={() =>{ handleSelected(1);
-              scrollToSection(homeRef)
-             }}
+            onClick={() => {
+              handleSelected(1);
+              scrollToSection(homeRef);
+            }}
           >
             <h2>Home</h2>
           </button>
@@ -42,10 +48,10 @@ function Header({ darkMode, toggleDark ,scrollToSection ,homeRef ,cartRef,addRef
                 ? " bg-neutral-900 text-white dark:bg-white dark:text-neutral-900 "
                 : "bg-white text-neutral-900 border-2 border-neutral-900 dark:bg-neutral-900 dark:text-white"
             } `}
-            onClick={() =>{ handleSelected(2);
-              scrollToSection(cartRef) 
+            onClick={() => {
+              handleSelected(2);
+              scrollToSection(cartRef);
             }}
-            
           >
             <h2>Weather Cart</h2>
           </button>
@@ -56,8 +62,9 @@ function Header({ darkMode, toggleDark ,scrollToSection ,homeRef ,cartRef,addRef
                 ? " bg-neutral-900 text-white dark:bg-white dark:text-neutral-900 "
                 : "bg-white text-neutral-900 border-2 border-neutral-900 dark:bg-neutral-900 dark:text-white"
             } `}
-            onClick={() => {handleSelected(3);
-              scrollToSection(addRef)
+            onClick={() => {
+              handleSelected(3);
+              scrollToSection(addRef);
             }}
           >
             <h2>Add</h2>
@@ -65,11 +72,17 @@ function Header({ darkMode, toggleDark ,scrollToSection ,homeRef ,cartRef,addRef
         </div>
         {/* nightMode */}
         <div className="   ">
-         <button onClick={toggleDark} className="dark:bg-white border-2 rounded-xl"> <img
-            src="/public/icons/dark-mode.png"
-            alt=""
-            className="w-16 sm:w-12"
-          /></button>
+          <button
+            onClick={toggleDark}
+            className="dark:bg-white border-2 rounded-xl"
+          >
+            {" "}
+            <img
+              src="/public/icons/dark-mode.png"
+              alt=""
+              className="w-16 sm:w-12"
+            />
+          </button>
         </div>
       </div>
     </div>
