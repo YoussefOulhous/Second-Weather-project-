@@ -20,7 +20,7 @@ function AddToCart({ cart, addRef, darkMode }) {
               {cart.map((weatherData, index) => (
                 <div
                   key={index}
-                  className="flex gap- items-center rounded-xl  dark:border-white border-2 border-black w-[200px] sm:w-[400px] md:w-[400px] lg:w-[400px] xl:w-[400px] font-poppins mt-16"
+                  className="flex gap- items-center rounded-xl  dark:border-white border-2 border-black w-[250px] sm:w-[400px] md:w-[400px] lg:w-[400px] xl:w-[400px] font-poppins mt-16"
                 >
                   <img
                     src={`http://openweathermap.org/img/wn/${weatherData.weather[0].icon}@2x.png`}

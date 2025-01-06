@@ -21,10 +21,10 @@ function Main({ darkMode, homeRef, scrollToSection, cartRef }) {
             ]}
             wrapper="span"
             speed={50}
-            className=" text-4xl w-[250px] lg:text-7xl font-poppins sm:w-[400px] md:w-[400px] lg:w-[400px] xl:w-[400px]  font-semibold tracking-wide sm:text-5xl md:text-6xl dark:text-yellow-400 dark:shadow-xl"
+            className=" text-4xl w-[250px] lg:text-7xl font-poppins sm:w-[400px] md:w-[400px] lg:w-[450px] xl:w-[450px]  font-semibold tracking-wide sm:text-5xl md:text-6xl dark:text-yellow-400 dark:shadow-xl"
             repeat={Infinity}
           />
-          <p className="text-xs mt-4 text-gray-600 w-[250px] sm:text-xs sm:w-[300px] md:text-sm md:w-[600px] xl:w-[600px] lg:w-[600px] dark:text-white  ">
+          <p className="text-xs mt-4 text-gray-600 w-[250px] sm:text-xs sm:w-[300px] md:text-sm md:w-[400px] xl:w-[600px] lg:w-[600px] dark:text-white  ">
             Stay prepared with our real-time weather updates. Whether you're
             planning your day or a week-long trip, our accurate forecasts help
             you stay ahead of changing weather conditions. Check temperatures,
@@ -57,9 +57,9 @@ function Main({ darkMode, homeRef, scrollToSection, cartRef }) {
             />
           </div>
         </div>
-        <div className=" w-[80px] h-[80px]  rounded-full bg-yellow-500  shadow-2xl shadow-neutral-900 dark:shadow-yellow-800 sm:w-[200px] sm:h-[150px] sm:mt-16 sm:mr-6 md:w-[250px] md:h-[230px] lg:w-[300px] lg:h-[300px] lg:ml-9 xl:w-[400px] xl:h-[400px] xl:ml-32"></div>
+        <div className=" w-[80px] h-[80px]  rounded-full bg-yellow-500  shrink-0 shadow-2xl shadow-neutral-900 dark:shadow-yellow-800 sm:w-[200px] sm:h-[150px] sm:mt-16 sm:mr-6 md:w-[250px] md:h-[230px] lg:w-[300px] lg:h-[300px] lg:ml-9 xl:w-[400px] xl:h-[400px] xl:ml-32"></div>
       </div>
-      <div className="dark:bg-neutral-900">
+      <div className="dark:bg-neutral-900 w-screen">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
           <path
             fill="#FFD23F"

@@ -55,7 +55,7 @@ function WeatherCart({
             <img
               src="/icons/search.png"
               alt=""
-              className="w-6 top-2 left-2 sm:top-3 sm:left-2 absolute right-5 bottom-5 z-0 "
+              className="w-6 top-2 left-2 sm:top-3 sm:left-2  absolute right-5 bottom-5 z-0 "
             />
           </button>
         </div>
@@ -68,7 +68,7 @@ function WeatherCart({
           )}
           {weatherData ? (
             <div className="mt-10">
-              <div className="w-[300px] ml-10 bg-neutral-900 text-white sm:h-[515px] md:h-[515px] lg:h-[515px] xl:h-[515px] rounded-lg border-white border-2 shadow-xl shadow-white">
+              <div className="w-[300px] ml-16 sm:ml-20 md:ml-20 lg:ml-20 xl:ml-20 bg-neutral-900 text-white sm:h-[515px] sm:w-[400px] md:w-[400px] lg:w-[400px] xl:w-[400px] md:h-[515px] lg:h-[515px] xl:h-[515px] rounded-lg border-white border-2 shadow-xl shadow-white">
                 <div className="flex-col flex items-center p-7">
                   <div className="flex gap-1 mr-10 items-center">
                     <img src="/icons/gps.png" alt="" className="w-10 sm:w-10 md:w-10 lg:w-10 xl:w-10" />
@@ -111,7 +111,7 @@ function WeatherCart({
               </div>
             </div>
           ) : (
-            <div className="w-[300px] ml-10  sm:h-[515px] md:h-[515px] lg:h-[515px] xl:h-[515px]  bg-neutral-900 text-white h-[515px] rounded-lg border-white border-2 shadow-xl shadow-white flex items-center mt-12 ">
+            <div className="w-[500px] ml-10  sm:h-[515px] md:h-[515px] lg:h-[515px] xl:h-[515px]  bg-neutral-900 text-white h-[515px] rounded-lg border-white border-2 shadow-xl shadow-white flex items-center mt-12 ">
               <span className="text-center text-4xl font-bold ml-[30%]">
                 No Data
               </span>
