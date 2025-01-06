@@ -23,7 +23,7 @@ function Header({
           <img
             src="/public/icons/sunset.png"
             alt=""
-            className="w-7 sm:w-10 md:12 lg:16 "
+            className="w-7 h-10 sm:w-10 md:12 lg:16 "
           />
         </div>
         {/* nav */}
@@ -80,7 +80,7 @@ function Header({
             <img
               src="/public/icons/dark-mode.png"
               alt=""
-              className="w-7 sm:w-12"
+              className="w-7 h-10 sm:w-12"
             />
           </button>
         </div>
