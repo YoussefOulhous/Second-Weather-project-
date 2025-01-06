@@ -59,15 +59,28 @@ function App() {
     setError(null);
 
     try {
+      setError(null)
       const response = await axios.get(API_URL);
       setWeatherData(response.data);
     } catch (error) {
+      setWeatherData(null)
       setError(
         "Failed to fetch weather data. Please check the city name or try again later!"
       );
       return;
     }
   };
+
+  useEffect(() => {
+    
+    if (city.trim() === "") return;
+    fetchingData();
+
+    const interval = setInterval(fetchingData, 60000);
+
+   
+    return () => clearInterval(interval);
+  }, [city]);
 
   return (
     <div>
