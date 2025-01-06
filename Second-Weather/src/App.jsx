@@ -7,6 +7,7 @@ import Main from "./components/Main";
 import WeatherCart from "./components/WeatherCard";
 import AddToCart from "./components/AddToCart";
 import Loader from "./components/Loader";
+import ErrorMessage from "./components/ErrorMessage";
 
 function App() {
   const [city, setCity] = useState("");
@@ -124,6 +125,7 @@ function App() {
             addRef={addRef}
             darkMode={darkMode}
           />
+          {/* <ErrorMessage /> */}
         </>
       )}
     </div>

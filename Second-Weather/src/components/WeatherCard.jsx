@@ -36,43 +36,43 @@ function WeatherCart({
 
   return (
     <div
-      className="bg-[#FFD23F]  flex justify-center items-center sm:items-center bottom-4"
+      className="bg-[#FFD23F]  flex justify-center items-center sm:items-center bottom-4 w-screen  "
       ref={cartRef}
     >
       <div className="">
-        <div className="flex- items-center">
+        <div className="flex- items-center ml-20 ">
           <input
             type="text"
             placeholder="Search"
-            className="font-poppins w-[400px] rounded-full  border-2 py-4 px-6 text-2xl  sm:w-[350px]  sm:py-2  "
+            className="font-poppins w-[200px] text-xl py-2 px-3 md:w-[400px] lg:w-[400px] xl:w-[400px]  rounded-full  border-2 md:py-4 lg:py-4 xl:py-4  md:px-6 lg:px-6 xl:px-6  sm:text-2xl  md:text-2xl lg:text-2xl xl:text-2xl  sm:w-[350px]  sm:py-2  "
             onChange={handleCityName}
             onKeyDown={entreClick}
           />
           <button
             onClick={handleSearchButtonClick}
-            className="w-16 h-16 bg-white rounded-full  relative  border-2 border-black py-5 ml-5 sm:w-12 sm:h-12 md:w-14 md:h-14 "
+            className="w-12 h-12 lg:w-16 lg:h-16 xl:w-16 xl:h-16  bg-white rounded-full  relative  border-2 border-black py-5 ml-5 sm:w-12 sm:h-12 md:w-14 md:h-14 "
           >
             <img
               src="/icons/search.png"
               alt=""
-              className="w-6 sm:top-3 sm:left-2 absolute right-5 bottom-5 z-0 "
+              className="w-6 top-2 left-2 sm:top-3 sm:left-2 absolute right-5 bottom-5 z-0 "
             />
           </button>
         </div>
 
         <div>
           {error && (
-            <p className="text-xl font-bold font-poppins text-center mt-16 text-red-600 ml-10 w-96">
+            <p className="w-[400px] font-semibold text-lg px-20 sm:text-xl  sm:font-bold  md:text-xl  md:font-bold  lg:text-xl  lg:font-bold  xl:text-xl  xl:font-bold font-poppins text-center mt-16 text-red-600 ml-10 sm:w-96 md:w-96 lg:w-96 xl:w-96  ">
               {error}
             </p>
           )}
           {weatherData ? (
             <div className="mt-10">
-              <div className="w-[450px] bg-neutral-900 text-white h-[515px] rounded-lg border-white border-2 shadow-xl shadow-white">
+              <div className="w-[300px] ml-10 bg-neutral-900 text-white sm:h-[515px] md:h-[515px] lg:h-[515px] xl:h-[515px] rounded-lg border-white border-2 shadow-xl shadow-white">
                 <div className="flex-col flex items-center p-7">
-                  <div className="flex gap-1 mr-10">
-                    <img src="/icons/gps.png" alt="" className="w-10" />
-                    <h1 className="text-4xl font-poppins font-">
+                  <div className="flex gap-1 mr-10 items-center">
+                    <img src="/icons/gps.png" alt="" className="w-10 sm:w-10 md:w-10 lg:w-10 xl:w-10" />
+                    <h1 className=" text-2xl sm:text-4xl md:text-4xl lg:text-4xl  xl:text-4xl  font-poppins font-">
                       {weatherData.name}
                     </h1>
                   </div>
@@ -87,18 +87,18 @@ function WeatherCart({
                   </h2>
                   <hr className="w-1/2 mt-10 items-center" />
                 </div>
-                <div className="flex justify-between px-12">
+                <div className="flex justify-between px-12 gap-8 ">
                   <div>
-                    <h2 className="text-2xl font-poppins font-semibold border-b-2">
+                    <h2 className=" text-xl sm:text-2xl md:text-2xl lg:text-2xl xl:text-2xl font-poppins font-semibold border-b-2 ">
                       Humidity:
                     </h2>
                     <div className="flex items-center gap-3 mt-2">
                       <img src="/icons/weather.png" alt="" className="w-10" />
-                      <span>{weatherData.main.humidity} %</span>
+                      <span >{weatherData.main.humidity} %</span>
                     </div>
                   </div>
                   <div>
-                    <h2 className="text-2xl font-poppins font-semibold border-b-2">
+                    <h2 className="text-lg sm:text-2xl md:text-2xl lg:text-2xl xl:text-2xl font-poppins font-semibold border-b-2">
                       Wind Speed:
                     </h2>
                     <div className="flex items-center gap-3 mt-2">
@@ -111,8 +111,8 @@ function WeatherCart({
               </div>
             </div>
           ) : (
-            <div className="w-[450px] bg-neutral-900 text-white h-[515px] rounded-lg border-white border-2 shadow-xl shadow-white flex items-center mt-12 ">
-              <span className="text-center text-4xl font-bold ml-[35%]">
+            <div className="w-[300px] ml-10  sm:h-[515px] md:h-[515px] lg:h-[515px] xl:h-[515px]  bg-neutral-900 text-white h-[515px] rounded-lg border-white border-2 shadow-xl shadow-white flex items-center mt-12 ">
+              <span className="text-center text-4xl font-bold ml-[30%]">
                 No Data
               </span>
             </div>
@@ -122,7 +122,7 @@ function WeatherCart({
             onClick={() => {
               AddCart(weatherData);
             }}
-            className="bg-green-500 py-5 px-9 mt-16 rounded-xl font-semibold font-poppins text-3xl relative left-1/2 transform -translate-x-1/2 -translate-y-1/2 "
+            className="bg-green-500 py-5 px-9 mt-16 ml-3 rounded-xl font-semibold font-poppins text-3xl relative left-1/2 transform -translate-x-1/2 -translate-y-1/2 "
           >
             Add
           </button>
