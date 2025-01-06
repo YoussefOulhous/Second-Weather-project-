@@ -19,7 +19,7 @@ function Header({
     <div className={`${darkMode && "dark"}`}>
       <div className="flex justify-around  py-5 px-5 items-center w-full border-b-2 border-gray-200 dark:border-white fixed backdrop-blur shrink-0 z-10">
         {/* logo */}
-        <div className=" border-2 border-gray-200 dark:border-white rounded-xl">
+        <div className=" border-2 border-gray-200 dark:border-white rounded-xl h-12 w-12 shrink-0  ">
           <img
             src="/public/icons/sunset.png"
             alt=""
@@ -74,7 +74,7 @@ function Header({
         <div className="   ">
           <button
             onClick={toggleDark}
-            className="dark:bg-white border-2 rounded-xl"
+            className="dark:bg-white border-2 rounded-xl w-12 h-12 shrink-0"
           >
             {" "}
             <img

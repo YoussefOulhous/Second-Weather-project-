@@ -36,11 +36,11 @@ function WeatherCart({
 
   return (
     <div
-      className="bg-[#FFD23F]  flex justify-center items-center sm:items-center bottom-4 w-screen  "
+      className="bg-[#FFD23F]  flex justify-center items-center sm:items-center bottom-4 w-screen "
       ref={cartRef}
     >
       <div className="">
-        <div className="flex- items-center ml-20 ">
+        <div className="flex justify-center items-center ml-20 ">
           <input
             type="text"
             placeholder="Search"
@@ -62,12 +62,15 @@ function WeatherCart({
 
         <div>
           {error && (
-            <p className="w-[400px] font-semibold text-lg px-20 sm:text-xl  sm:font-bold  md:text-xl  md:font-bold  lg:text-xl  lg:font-bold  xl:text-xl  xl:font-bold font-poppins text-center mt-16 text-red-600 ml-10 sm:w-96 md:w-96 lg:w-96 xl:w-96  ">
-              {error}
-            </p>
+            <div className="flex justify-center ">
+                <p className="w-[400px] font-semibold text-lg px-2 sm:text-xl  sm:font-bold  md:text-xl  md:font-bold  lg:text-xl  lg:font-bold  xl:text-xl  xl:font-bold font-poppins text-center mt-16 text-red-600 ml-10 sm:w-96 md:w-96 lg:w-96 xl:w-96  ">
+                {error}
+                </p>
+            </div>
+            
           )}
           {weatherData ? (
-            <div className="mt-10">
+            <div className="mt-10 flex justify-center items-center">
               <div className="w-[300px] ml-16 sm:ml-20 md:ml-20 lg:ml-20 xl:ml-20 bg-neutral-900 text-white sm:h-[515px] sm:w-[400px] md:w-[400px] lg:w-[400px] xl:w-[400px] md:h-[515px] lg:h-[515px] xl:h-[515px] rounded-lg border-white border-2 shadow-xl shadow-white">
                 <div className="flex-col flex items-center p-7">
                   <div className="flex gap-1 mr-10 items-center">
@@ -111,11 +114,15 @@ function WeatherCart({
               </div>
             </div>
           ) : (
-            <div className="w-[500px] ml-10  sm:h-[515px] md:h-[515px] lg:h-[515px] xl:h-[515px]  bg-neutral-900 text-white h-[515px] rounded-lg border-white border-2 shadow-xl shadow-white flex items-center mt-12 ">
+            <div className="mt-10 flex justify-center items-center">
+              <div className="w-[300px] ml-10  sm:h-[515px] md:h-[515px] lg:h-[515px] xl:h-[515px]  sm:w-[400px] md:w-[400px] lg:w-[400px] xl:w-[400px]  bg-neutral-900 text-white h-[515px] rounded-lg border-white border-2 shadow-xl shadow-white flex items-center mt-12 ">
               <span className="text-center text-4xl font-bold ml-[30%]">
                 No Data
               </span>
             </div>
+
+            </div>
+            
           )}
           <br />
           <button

@@ -21,10 +21,10 @@ function Main({ darkMode, homeRef, scrollToSection, cartRef }) {
             ]}
             wrapper="span"
             speed={50}
-            className=" text-4xl w-[250px] lg:text-7xl font-poppins sm:w-[400px] md:w-[400px] lg:w-[450px] xl:w-[450px]  font-semibold tracking-wide sm:text-5xl md:text-6xl dark:text-yellow-400 dark:shadow-xl"
+            className=" text-4xl w-[250px] h-[70px] lg:text-7xl font-poppins sm:w-[400px] md:w-[400px] lg:w-[450px] xl:w-[450px]  font-semibold tracking-wide sm:text-5xl md:text-6xl dark:text-yellow-400 dark:shadow-xl"
             repeat={Infinity}
           />
-          <p className="text-xs mt-4 text-gray-600 w-[250px] sm:text-xs sm:w-[300px] md:text-sm md:w-[400px] xl:w-[600px] lg:w-[600px] dark:text-white  ">
+          <p className="text-xs mt-5  text-gray-600 w-[250px] sm:text-xs sm:w-[300px] md:text-sm md:w-[400px] xl:w-[600px] lg:w-[600px] dark:text-white  ">
             Stay prepared with our real-time weather updates. Whether you're
             planning your day or a week-long trip, our accurate forecasts help
             you stay ahead of changing weather conditions. Check temperatures,
